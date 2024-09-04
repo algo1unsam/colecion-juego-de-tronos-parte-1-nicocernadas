@@ -20,7 +20,8 @@ object daenerys{
         cantidad = 0
     }
 
-    //Devuelve una lista con los objetos depositados en roca_Dragon + los que tiene daenerys encima
+    //Devuelve una lista con los objetos depositados en roca_Dragon + los que tiene daenerys encima,
+    //Osea el total de objetos
     method artefactos() {
         return roca_dragon.objetos() + self.objetos()
     }
@@ -36,6 +37,7 @@ object roca_dragon {
     var property objetos = []
     
     //Guarda en la lista de objetos de roca_dragon los objetos de la lista de daenerys
+    //Este metodo se autollama en daenerys.depositar()
     method guardados(lista) {
         objetos += lista
     }
